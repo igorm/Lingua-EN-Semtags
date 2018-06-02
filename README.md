@@ -71,11 +71,11 @@ Returns/sets the verbose mode.
 
 Returns the `WordNet::QueryData` instance used by the engine.
 
-#### SEE ALSO
+## SEE ALSO
 
 `Lingua::EN::Tagger`, `WordNet::QueryData`
 
-### AUTHOR
+## AUTHOR
 
 Igor Myroshnichenko <igorm@cpan.org>
 
