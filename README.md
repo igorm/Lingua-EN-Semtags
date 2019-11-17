@@ -79,7 +79,7 @@ Returns the `WordNet::QueryData` instance used by the engine.
 
 Igor Myroshnichenko <igorm@cpan.org>
 
-Copyright (c) 2008-2018, All Rights Reserved.
+Copyright (c) 2008-2020, All Rights Reserved.
 
 This software is free software and may be redistributed and/or modified
 under the same terms as Perl itself.
