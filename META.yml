@@ -1,13 +1,13 @@
 --- #YAML:1.0
 name:                Lingua-EN-Semtags-Engine
 version:             0.02
-abstract:            extract semantic tags (semtags) from English text 
+abstract:            extract semantic tags (semtags) from English text
 license:             ~
-author:              
+author:
     - Igor Myroshnichenko <igorm@cpan.org>
 generated_by:        ExtUtils::MakeMaker version 6.42_01
 distribution_type:   module
-requires:     
+requires:
     Lingua::EN::Tagger:            0.11
     WordNet::QueryData:            1.46
 meta-spec:
