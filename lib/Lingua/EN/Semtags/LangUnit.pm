@@ -5,43 +5,43 @@ use warnings;
 # POS - part of speech tag (Lingua::EN::Tagger style)
 # POSWN - part of speech tag (WordNet style)
 use constant POS2POSWN => {
-	NN => 'n', # Noun
-	VB => 'v', # Verb
-	JJ => 'a', # Adjective
-	RB => 'r'  # Adverb	
+    NN => 'n', # Noun
+    VB => 'v', # Verb
+    JJ => 'a', # Adjective
+    RB => 'r'  # Adverb
 };
 use constant TRUE  => 1;
 use constant FALSE => 0;
 
 our $VERSION = '0.02';
 
-#============================================================	
+#============================================================
 sub new {
 #============================================================
-	my ($invocant, %args) = @_;
-	my $self = bless ({}, ref $invocant || $invocant);
-	$self->_init(%args);
-	return $self;
+    my ($invocant, %args) = @_;
+    my $self = bless ({}, ref $invocant || $invocant);
+    $self->_init(%args);
+    return $self;
 }
 
 #============================================================
 sub _init {
 #============================================================
-	my ($self, %args) = @_;
-	
-	# Initialize attributes
-	$self->{token} = undef;
-	$self->{is_word} = FALSE;
-	$self->{is_phrase} = FALSE;
-	$self->{pos} = undef;
-	$self->{sense} = undef;
-	$self->{isas} = [];
-	
-	# Set the args that came from the constructor
-	foreach my $arg (sort keys %args) {
-		die "Unknown argument: $arg!" unless exists $self->{$arg};
-		$self->{$arg} = $args{$arg};
-	}
+    my ($self, %args) = @_;
+
+    # Initialize attributes
+    $self->{token} = undef;
+    $self->{is_word} = FALSE;
+    $self->{is_phrase} = FALSE;
+    $self->{pos} = undef;
+    $self->{sense} = undef;
+    $self->{isas} = [];
+
+    # Set the args that came from the constructor
+    foreach my $arg (sort keys %args) {
+        die "Unknown argument: $arg!" unless exists $self->{$arg};
+        $self->{$arg} = $args{$arg};
+    }
 }
 
 #============================================================
@@ -61,8 +61,8 @@ __END__
 
 =head1 NAME
 
-Lingua::EN::Semtags::LangUnit - a DTO used by C<Lingua::EN::Semtags::Sentence> 
-and C<Lingua::EN::Semtags::Engine>. 
+Lingua::EN::Semtags::LangUnit - a DTO used by C<Lingua::EN::Semtags::Sentence>
+and C<Lingua::EN::Semtags::Engine>.
 
 =head1 SYNOPSIS
 
@@ -70,14 +70,14 @@ and C<Lingua::EN::Semtags::Engine>.
 
 =head1 DESCRIPTION
 
-A DTO used by C<Lingua::EN::Semtags::Sentence> and 
+A DTO used by C<Lingua::EN::Semtags::Sentence> and
 C<Lingua::EN::Semtags::Engine>.
 
 =head2 METHODS
 
 =over 4
 
-=item B<add_isa($lunit)> 
+=item B<add_isa($lunit)>
 
 Adds C<$isa> to C<$self-E<gt>{isas}>.
 
@@ -107,7 +107,7 @@ Returns/sets C<$self-E<gt>{sense}>.
 
 =item B<token()>
 
-Returns C<$self-E<gt>{token}>.    
+Returns C<$self-E<gt>{token}>.
 
 =back
 
@@ -119,7 +119,7 @@ L<Lingua::EN::Semtags::Engine>, L<Lingua::EN::Semtags::Sentence>
 
 Igor Myroshnichenko E<lt>igorm@cpan.orgE<gt>
 
-Copyright (c) 2008, All Rights Reserved.
+Copyright (c) 2008-2020, All Rights Reserved.
 
 This software is free software and may be redistributed and/or
 modified under the same terms as Perl itself.
